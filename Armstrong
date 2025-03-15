@@ -1,0 +1,30 @@
+
+import java.util.*;
+public class Armstrong {
+	public static void main(String[] args) {
+		int n,sum=0,power,l,rem,temp;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter an integer value:");
+		n=sc.nextInt();
+		temp=n;
+		l=(int)Math.log10(n)+1;
+		while(n>0)
+		{
+			rem=n%10;
+			n=n/10;
+			power=(int)Math.pow(rem,l);
+			sum=sum+power;
+		}
+		if(sum==temp)
+		{
+			System.out.println("Armstrong number");
+		}
+		else
+		{
+			System.out.println("Not a Armstrong number");
+		}
+		sc.close();
+		
+	}
+
+}
