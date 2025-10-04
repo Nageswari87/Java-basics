@@ -1,0 +1,22 @@
+import java.util.*;
+public class Clock {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter hours and minutes");
+		int hours=sc.nextInt();
+		int mins=sc.nextInt();
+		float hours_angle=(float)(hours+(mins)/60.0)*30;
+		float mins_angle=mins*6;
+		float total_angle=Math.abs(hours_angle-mins_angle);
+		if(total_angle>180)
+		{
+			total_angle=360-total_angle;
+		}
+		System.out.println(total_angle);
+		sc.close();
+	}
+
+}
